@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,400&family=Roboto:wght@700&display=swap');
+
+body {
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+
+#favicon {
+    height: 80px;
+    border-radius: 45px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+#navBar {
+    background-color: #00a7e1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#navTitle {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: Verdana, sans-serif;
+    text-shadow: 2px 2px gray;
+    font-size: 21px;
+}
+
+#homeButton {
+    height: 40px;
+    right: 5px;
+    position: absolute;
+}
+
+#welcomeHolder {
+    display: block;
+    margin-top: 30px;
+}
+
+#welcomeLocationBtn {
+    margin-right: 50px;
+    border-radius: 30px;
+    width: 130px;
+    margin-top: 20px;
+    color: black;
+    background-color:#cfe2ff;
+}
+
+#welcomeLocationBtn:hover {
+    background-color: #00a7e1;
+}
+
+#welcomeSearchBtn {
+    border-radius: 30px;
+    width: 130px;
+    margin-top: 20px;
+    color: black;
+    background-color:#cfe2ff;
+}
+
+#welcomeSearchBtn:hover {
+    background-color: #00a7e1;
+}
+
+#searchButton {
+    height: 35px;
+    right: 45px;
+    position: absolute;
+}
+
+#welcomeFavicon {
+    margin-top: 100px;
+    height: 100px;
+}
+
+.modal-header {
+    background-color: #00a7e1;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    color: white;
+    font-family: Verdana, sans-serif;
+}
+
+#personnelTable {
+    overflow: scroll;
+    margin: 0px 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+#locationTable {
+    overflow: scroll;
+    margin: 0px 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+table {
+    font-size: 0.8em;
+}
+
+#tableHeader {
+    margin: 20px;
+}
+
+th {
+    font-family: Verdana, sans-serif;
+    color: black;
+    font-size: 10px;
+}
+
+#personnelSearch {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 34px;
+    border-radius: 20px;
+}
+
+#locationSearch {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 34px;
+    border-radius: 20px;
+}
+
+#myInput {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.dangerButton {
+    background-color: #d9534f;
+}
+
+.infoButton {
+    background-color:#cfe2ff;
+    color: black;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+
+#searchHolder {
+    display: none;
+}
+
+
+.locationList {
+    margin: 5px;
+    width: 225px;
+}
+
+#locationHolder {
+    display: none;
+    margin-bottom: 40px;
+}
+
+#newLocationBtn {
+    display: block;
+    position: relative;
+    left: 42px;
+    bottom: -4px;
+}
+
+#deleteLocationCheckBtn {
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+#editLocationCheckBtn {
+    display: none;
+}
+
+#editLocationBtn {
+    display: block;
+}
+
+#newDepartmentBtn {
+    display: none;
+    position: relative;
+    left: 44px;
+    bottom: -5px;
+}
+
+.departmentList {
+    margin: 5px;
+    width: 220px;
+}
+
+#departmentList {
+    margin-bottom: 40px
+}
+
+#departmentLocation {
+    width: auto;
+}
+
+#editDepartmentBtn {
+    display: block;
+}
+
+#editDepartmentCheckBtn {
+    display: none;
+}
+
+.departmentBackBtn {
+    position: relative;
+    float: right;
+    margin-top: 2%;
+    margin-right: 39px;
+}
+
+#departmentHolder {
+    display: none;
+}
+
+.personnelList {
+    margin: 5px;
+    width: 225px;
+}
+
+#personnelHolder {
+    display: none;
+    margin-bottom: 40px;
+}
+
+#newPersonnelBtn {
+    display: block;
+    position: relative;
+    left: 42px;
+    bottom: -5px;
+}
+
+.personnelBackBtn {
+    position: relative;
+    float: right;
+    margin-top: 5px;
+    margin-right: 36px;
+}
+
+.d-grid {
+    display: block !important;
+    width: 340px;
+    text-align: center;
+}
+
+#editPersonnelBtn {
+    display: block;
+}
+
+#editCheckBtn {
+    display: none;
+}
+
+#editPersonnelCheck {
+    display: none;
+}
+
+#deleteCheckBtn {
+    display: block;
+    position: absolute;
+    left: 75px;
+}
+
+#deletePersonnelBtn {
+    display: block;
+}
+
+#deleteDepartmentCheckBtn {
+    display: block;
+    left: 10px;
+    position: absolute;
+}

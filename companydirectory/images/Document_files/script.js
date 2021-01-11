@@ -2,39 +2,6 @@ function reload(){
   location.reload();
 }
 
-$('body').on('click','#homeButton',function(){
-  $("#editPersonnelBtn").css("display", "block");
-  $("#saveEditPersonnelBtn").css("display", "none");
-  $("#selectedPersonnelTitle").html('Personnel');
-  $("#firstName").attr("disabled", true);
-  $("#lastName").attr("disabled", true);
-  $("#jobTitle").attr("disabled", true);
-  $("#email").attr("disabled", true);
-  location.reload();
-});
-
-  $('body').on('click','#closeDeleteBtn',function(){  
-    location.reload();
-  })
-
-$("#myInput").on("keyup", function(){
-  $("#personnelTable").css("display", "block");
-  $("#departmentTable").css("display", "none");
-  $("#locationTable").css("display", "none");
-})
-
-$("#departmentSearch").on("click", function(){
-  $("#personnelTable").css("display", "none");
-  $("#departmentTable").css("display", "block");
-  $("#locationTable").css("display", "none");
-})
-
-$("#locationSearch").on("click", function(){
-  $("#personnelTable").css("display", "none");
-  $("#departmentTable").css("display", "none");
-  $("#locationTable").css("display", "block");
-})
-
 $('body').on('click','#welcomeLocationBtn',function(){
   $("#welcomeHolder").css("display", "none");
   $("#locationHolder").css("display", "block");
@@ -110,7 +77,7 @@ $.ajax({
             for (i = 0; i < result['data'].length; i++) {
               $locationID = result['data'][i]['id'];
               $locationName = result['data'][i]['name'];
-              $('#locationList').append('<div class="d-grid gap-2 col-6 mx-auto"><button class="btn btn-secondary locationList" type="button" id="'+$locationID+'" name="'+$locationName+'">'+$locationName+'</button><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="'+$locationID+'" value="'+$locationID+'" name="'+$locationName+'">Edit</button></div>');
+              $('#locationList').append('<div class="d-grid gap-2 col-6 mx-auto"><a  class="btn btn-secondary locationList" type="button" id="'+$locationID+'" name="'+$locationName+'">'+$locationName+'</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="'+$locationID+'" value="'+$locationID+'" name="'+$locationName+'">Info</button></div>');
             }})} 
 
 //Location Info popup
@@ -235,8 +202,8 @@ $.ajax({
           $departmentLocName = $locationNameChoice;
           $departmentName = result['data'][i]['name'];
           $departmentID = result['data'][i]['id'];
-          $('#departmentList').append('<div class="d-grid gap-2 col-6 mx-auto"><button class="btn btn-secondary departmentList" type="button" id="'+$departmentID+'">'+$departmentName+'</button><button type="button" class="btn btn-primary infoButton departmentInfoBtn" data-bs-toggle="modal" data-bs-target="#departmentModal" id="'+$departmentID+'" value="'+$departmentLocID+'" name="'+$departmentName+'">Edit</button></div>');
-        }} 
+          $('#departmentList').append('<div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary departmentList" type="button" id="'+$departmentID+'">'+$departmentName+'</a><button type="button" class="btn btn-primary infoButton departmentInfoBtn" data-bs-toggle="modal" data-bs-target="#departmentModal" id="'+$departmentID+'" value="'+$departmentLocID+'" name="'+$departmentName+'">Info</button></div>');
+        }}
         $('#departmentList').append('<button type="button" class="btn btn-outline-primary departmentBackBtn" onclick="reload()">Close</button>');
 
 //Department Info popup
@@ -296,20 +263,16 @@ $(document).on('click', '.departmentInfoBtn', function() {
           location.reload();
       }}})//Delete location
   })
-});
 
 //New Department
 $('body').on('click','#newDepartmentBtn',function(){ 
   $("#newDepartmentLocID").attr("placeholder", $locationChoice);
-  console.log('click') 
 })
 
 //New Department
 $('body').on('click','#saveNewDepartmentBtn',function(){   
   console.log('click') 
   $newDepartmentName = $('#newDepartmentName').val();
-  $newLocationID = $('#newDepartmentLocID').attr('placeholder');
-  console.log($newLocationID);
 
   $.ajax({
     url: "php/insertDepartment.php",
@@ -317,7 +280,7 @@ $('body').on('click','#saveNewDepartmentBtn',function(){
     dataType: 'json',
     data: {
       name: $newDepartmentName,
-      locationID: $newLocationID,
+      locationID: $selectDepartmentLocID,
     },
     success: function(result) {
         if (result.status.name != "ok") {
@@ -326,6 +289,7 @@ $('body').on('click','#saveNewDepartmentBtn',function(){
           location.reload();
     }}})//New location
   })
+});
 
 //Get Personnel from department
 $('body').on('click','.departmentList',function(){    
@@ -356,7 +320,7 @@ $('body').on('click','.departmentList',function(){
             $jobTitle = result['data'][i]['jobTitle'];
             $email = result['data'][i]['email'];
             $departmentID = result['data'][i]['departmentID'];
-            $('#personnelList').append('<div class="d-grid gap-2 col-6 mx-auto"><button type="button" class="btn btn-secondary personnelList personnelInfoBtn" data-bs-toggle="modal" data-bs-target="#personnelModal" id="'+$personnelID+'" value="'+$personnelID+'" firstName="'+$firstName+'" lastName="'+$lastName+'" name="'+$firstName+ ' '+$lastName+'">'+$firstName+' '+$lastName+'</button><button type="button" class="btn btn-primary infoButton personnelInfoBtn" data-bs-toggle="modal" data-bs-target="#personnelModal" id="'+$personnelID+'" email="'+$email+'" jobTitle="'+$jobTitle+'" name="'+$firstName+' '+$lastName+'" firstName="'+$firstName+'" lastName="'+$lastName+'" value="'+$departmentID+'">Edit</button></div>');
+            $('#personnelList').append('<div class="d-grid gap-2 col-6 mx-auto"><button class="btn btn-secondary personnelList" type="button" id="'+$personnelID+'" value="'+$personnelID+'" firstName="'+$firstName+'" lastName="'+$lastName+'" name="'+$firstName+ ' '+$lastName+'">'+$firstName+' '+$lastName+'</button><button type="button" class="btn btn-primary infoButton personnelInfoBtn" data-bs-toggle="modal" data-bs-target="#personnelModal" id="'+$personnelID+'" email="'+$email+'" jobTitle="'+$jobTitle+'" name="'+$firstName+' '+$lastName+'" firstName="'+$firstName+'" lastName="'+$lastName+'" value="'+$departmentID+'">Info</button></div>');
           }
           $('#personnelList').append('<button type="button" class="btn btn-outline-primary personnelBackBtn" onclick="reload()">Close</button>');
         }
@@ -428,7 +392,7 @@ $('body').on('click','#newPersonnelBtn',function(){
   $("#departmentName").attr("placeholder", $departmentChoiceID);
   $("#locationName").attr("placeholder", $locationNameChoice);
 
-  //New Personnel
+  //New department
   $('body').on('click','#saveNewPersonnelBtn',function(){    
     $insertFirstName = $('#newFirstName').val();
     $insertLastName = $('#newLastName').val();
@@ -491,6 +455,7 @@ $.ajax({
               $allPersonnelLocation = result['data'][i]['location'];
               $('#personnelSearch').append('<option class="personnelSearch" id="'+$allPersonnelFirstName+'" value="'+$allPersonnelID+'" email="'+$allPersonnelEmail+'">'+$allPersonnelLastName+' '+$allPersonnelFirstName+'</option>');
               $('#personnelTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelFirstName+'</td><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+'</td><td value="'+$allPersonnelID+'">'+$allPersonnelDepartment +'</td><td value="'+$allPersonnelID+'">'+$allPersonnelLocation+'</td></tr>');
+              $('#locationTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelFirstName+'</td><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+'</td><td value="'+$allPersonnelID+'">'+$allPersonnelDepartment +'</td><td value="'+$allPersonnelID+'">'+$allPersonnelLocation+'</td></tr>');
             }
         })
 
@@ -511,26 +476,18 @@ $.ajax({
 
           $('body').on('change','#locationSearch',function(){
             $locationSearchID = $(this).val();
-            $('#locationTableData').html('');
             console.log($locationSearchID);
 
             $.ajax({
-              url: "php/getAllPersonnelByLocation.php",
+              url: "php/getAllPersonnel.php",
               type: 'POST',
               dataType: 'json',
               data: {
                 id: $locationSearchID,
               },
               success: function(result) {
-                for (i = 0; i < result['data'].length; i++) {
-                  $allPersonnelLocID = result['data'][i]['id'];
-                  $allPersonnelLocFirstName = result['data'][i]['firstName'];
-                  $allPersonnelLocLastName = result['data'][i]['lastName'];
-                  $allPersonnelLocEmail = result['data'][i]['email'];
-                  $allPersonnelLocDepartment = result['data'][i]['department'];
-                  $allPersonnelLocLocation = result['data'][i]['location'];
-                  $('#locationTableData').append('<tr value="'+$allPersonnelLocID+'" id="'+$allPersonnelLocID+'"><td value="'+$allPersonnelLocID+'">'+$allPersonnelLocFirstName+'</td><td value="'+$allPersonnelLocID+'">'+$allPersonnelLocLastName+'</td><td value="'+$allPersonnelLocID+'">'+$allPersonnelLocDepartment +'</td><td value="'+$allPersonnelLocID+'">'+$allPersonnelLocLocation+'</td></tr>');
-           }}})
+                console.log(result);
+            }})
         })
 
         //Filter location search
@@ -542,59 +499,7 @@ $.ajax({
             });
             $('#myInput').on('keyup', function() {
               var $element = $('#locationTableData');
-          })
-          });
-        });
-
-         //Get all departments
-         $.ajax({
-          url: "php/getAllDepartments.php",
-          type: 'POST',
-          dataType: 'json',
-          success: function(result) {
-              if (result.status.name == "ok") {
-                  $(document).ready(function(){
-                    for (i = 0; i < result['data'].length; i++) {
-                      $departmentID = result['data'][i]['id'];
-                      $departmentName = result['data'][i]['name'];
-                      $('#departmentSearch').append('<option class="departmentSearch" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</option>');
-                  
-                    }})}}})
-
-          $('body').on('change','#departmentSearch',function(){
-            $departmentSearchID = $(this).val();
-            $('#departmentTableData').html('');
-            console.log($departmentSearchID );
-
-            $.ajax({
-              url: "php/getAllPersonnelByDepartment.php",
-              type: 'POST',
-              dataType: 'json',
-              data: {
-                id: $departmentSearchID,
-              },
-              success: function(result) {
-                console.log(result);
-                for (i = 0; i < result['data'].length; i++) {
-                  $allPersonnelDepID = result['data'][i]['id'];
-                  $allPersonnelDepFirstName = result['data'][i]['firstName'];
-                  $allPersonnelDepLastName = result['data'][i]['lastName'];
-                  $allPersonnelDepEmail = result['data'][i]['email'];
-                  $allPersonnelDepDepartment = result['data'][i]['department'];
-                  $allPersonnelDepLocation = result['data'][i]['location'];
-                  $('#departmentTableData').append('<tr value="'+$allPersonnelDepID+'" id="'+$allPersonnelDepID+'"><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepFirstName+'</td><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepLastName+'</td><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepDepartment +'</td><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepLocation+'</td></tr>');
-           }}})
-        })
-
-        //Filter department search
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#departmentTableData tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-            $('#myInput').on('keyup', function() {
-              var $element = $('#departmentTableData');
+              var numberOfChildren = $element.children().length;
           })
           });
         });
@@ -790,3 +695,17 @@ $.ajax({
 }}}); 
 
 
+$('body').on('click','#homeButton',function(){
+  $("#editPersonnelBtn").css("display", "block");
+  $("#saveEditPersonnelBtn").css("display", "none");
+  $("#selectedPersonnelTitle").html('Personnel');
+  $("#firstName").attr("disabled", true);
+  $("#lastName").attr("disabled", true);
+  $("#jobTitle").attr("disabled", true);
+  $("#email").attr("disabled", true);
+  location.reload();
+});
+
+  $('body').on('click','#closeDeleteBtn',function(){  
+    location.reload();
+  })

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost/Test/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./Document_files/bootstrap.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/Test/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/Test/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/Test/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="http://localhost/Test/images/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="./Document_files/style.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <title>Document</title>
+</head>
+<body cz-shortcut-listen="true">  
+
+  <nav class="navbar navbar-light" id="navBar">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="navTitle">COMPANY DIRECTORY</a>
+      <img src="./Document_files/homeIcon.png" id="homeButton" alt="Home Button" title="Home Button">
+    </div>
+  </nav>
+
+  <div class="text-center" id="welcomeHolder" style="display: none;">
+    <h1>Company Directory</h1>
+    <br>
+    <img src="./Document_files/favicon.ico" id="favicon" alt="Favicon Button" title="Favicon Button">
+    <h2>Welcome!!</h2>
+    <p id="welcomeMessage">
+      <br>Please select:<br>
+    <button type="button" class="btn btn-info btn-lg" id="welcomeLocationBtn">Location</button>
+    <button type="button" class="btn btn-info btn-lg" id="welcomeSearchBtn">Search</button>
+    <br>
+
+  </p></div>
+  
+<!--Search List-->
+<div class="jumbotron" id="searchHolder" style="display: block;">
+  <br>
+    <h3 class="text-center">
+      Personnel Quick Search
+    </h3>
+    <form class="d-flex" id="myPersonnelDropdown">
+      <select class="form-select" aria-label="Default select example" id="personnelSearch">
+        <option>Personnel..</option>
+      <option class="personnelSearch" id="Tamarra" value="23" email="tacem@vinaora.com">Ace Tamarra</option><option class="personnelSearch" id="Lucien" value="25" email="lallsupo@goo.ne.jp">Allsup Lucien</option><option class="personnelSearch" id="Talbot" value="60" email="tandrassy1n@bigcartel.com">Andrassy Talbot</option><option class="personnelSearch" id="Stefanie" value="97" email="sanker2o@hud.gov">Anker Stefanie</option><option class="personnelSearch" id="Theo" value="11" email="taudasa@newsvine.com">Audas Theo</option><option class="personnelSearch" id="Matthus" value="55" email="mbanfield1i@angelfire.com">Banfield Matthus</option><option class="personnelSearch" id="Dulcie" value="95" email="dbaudi2m@last.fm">Baudi Dulcie</option><option class="personnelSearch" id="Ursola" value="71" email="uberthomieu1y@un.org">Berthomieu Ursola</option><option class="personnelSearch" id="Gay" value="21" email="gbickfordk@scientificamerican.com">Bickford Gay</option><option class="personnelSearch" id="Warner" value="38" email="wblonden11@spiegel.de">Blonden Warner</option><option class="personnelSearch" id="Stormie" value="77" email="sbolderstone24@globo.com">Bolderstone Stormie</option><option class="personnelSearch" id="Virge" value="27" email="vbootesq@oracle.com">Bootes Virge</option><option class="personnelSearch" id="Dore" value="44" email="dbraidford17@google.com.br">Braidford Dore</option><option class="personnelSearch" id="Ailis" value="36" email="abrewsterz@businesswire.com">Brewster Ailis</option><option class="personnelSearch" id="Lanette" value="42" email="lbuss15@51.la">Buss Lanette</option><option class="personnelSearch" id="Jon" value="50" email="jcalbaithe1d@netvibes.com">Calbaithe Jon</option><option class="personnelSearch" id="Melvyn" value="39" email="mcanner12@eepurl.com">Canner Melvyn</option><option class="personnelSearch" id="Leopold" value="13" email="lcarlc@paginegialle.it">Carl Leopold</option><option class="personnelSearch" id="Kristine" value="64" email="kchristal1r@behance.net">Christal Kristine</option><option class="personnelSearch" id="Anitra" value="35" email="acoleridgey@nbcnews.com">Coleridge Anitra</option><option class="personnelSearch" id="Reagen" value="84" email="rcorner2b@qq.com">Corner Reagen</option><option class="personnelSearch" id="Demetre" value="6" email="dcossam5@washington.edu">Cossam Demetre</option><option class="personnelSearch" id="Vlad" value="69" email="vcrocombe1w@mtv.com">Crocombe Vlad</option><option class="personnelSearch" id="Suzie" value="15" email="scromere@imageshack.us">Cromer Suzie</option><option class="personnelSearch" id="Emmery" value="51" email="edarben1e@mapquest.com">Darben Emmery</option><option class="personnelSearch" id="Cherye" value="98" email="cdecullip2p@loc.gov">de Cullip Cherye</option><option class="personnelSearch" id="Christina" value="75" email="cdenge22@canalblog.com">Denge Christina</option><option class="personnelSearch" id="Sinclare" value="99" email="sdeverall2q@ow.ly">Deverall Sinclare</option><option class="personnelSearch" id="Lizabeth" value="45" email="ldifranceshci18@mediafire.com">Di Franceshci Lizabeth</option><option class="personnelSearch" id="Annadiana" value="56" email="adrance1j@omniture.com">Drance Annadiana</option><option class="personnelSearch" id="Christy" value="86" email="cdunbobbin2d@feedburner.com">Dunbobbin Christy</option><option class="personnelSearch" id="Vern" value="33" email="vdurlingw@goo.gl">Durling Vern</option><option class="personnelSearch" id="Aveline" value="4" email="aedgson3@wikispaces.com">Edgson Aveline</option><option class="personnelSearch" id="Rinaldo" value="57" email="rfandrey1k@bbc.co.uk">Fandrey Rinaldo</option><option class="personnelSearch" id="Lorrie" value="59" email="lfattorini1m@geocities.jp">Fattorini Lorrie</option><option class="personnelSearch" id="Lay" value="19" email="lfintophi@goo.gl">Fintoph Lay</option><option class="personnelSearch" id="Moishe" value="20" email="mflinnj@list-manage.com">Flinn Moishe</option><option class="personnelSearch" id="Brendan" value="91" email="bfooks2i@utexas.edu">Fooks Brendan</option><option class="personnelSearch" id="Wilone" value="76" email="wfredi23@gizmodo.com">Fredi Wilone</option><option class="personnelSearch" id="Heida" value="74" email="hgallone21@hostgator.com">Gallone Heida</option><option class="personnelSearch" id="Brittney" value="80" email="bgaskal27@weather.com">Gaskal Brittney</option><option class="personnelSearch" id="Ryann" value="40" email="rgiampietro13@theguardian.com">Giampietro Ryann</option><option class="personnelSearch" id="Tracee" value="16" email="tgisbournf@bloglines.com">Gisbourn Tracee</option><option class="personnelSearch" id="Vanya" value="29" email="vgoulders@phoca.cz">Goulder Vanya</option><option class="personnelSearch" id="Field" value="81" email="fgresty28@networkadvertising.org">Gresty Field</option><option class="personnelSearch" id="Benjamin" value="53" email="bhawkslee1g@hubpages.com">Hawkslee Benjamin</option><option class="personnelSearch" id="Rosana" value="1" email="rheffron0@ibm.com">Heffron Rosana</option><option class="personnelSearch" id="Gayleen" value="67" email="ghessay1u@exblog.jp">Hessay Gayleen</option><option class="personnelSearch" id="Jackelyn" value="26" email="jimlachp@google.it">Imlach Jackelyn</option><option class="personnelSearch" id="Lissa" value="88" email="linsley2f@friendfeed.com">Insley Lissa</option><option class="personnelSearch" id="Robena" value="83" email="rivanyutin2a@mozilla.org">Ivanyutin Robena</option><option class="personnelSearch" id="Harwell" value="41" email="hjefferys14@jimdo.com">Jefferys Harwell</option><option class="personnelSearch" id="Shae" value="100" email="sjohncey2r@bluehost.com">Johncey Shae</option><option class="personnelSearch" id="Georgeanna" value="70" email="gjoisce1x@google.com.au">Joisce Georgeanna</option><option class="personnelSearch" id="Spense" value="12" email="sjollissb@wufoo.com">Jolliss Spense</option><option class="personnelSearch" id="Vera" value="3" email="vkisbee2@nih.gov">Kisbee Vera</option><option class="personnelSearch" id="Lin" value="18" email="lklassmannh@indiatimes.com">Klassmann Lin</option><option class="personnelSearch" id="Kris" value="2" email="kkovnot1@google.nl">Kovnot Kris</option><option class="personnelSearch" id="Winthrop" value="87" email="wlansley2e@alibaba.com">Lansley Winthrop</option><option class="personnelSearch" id="Mavis" value="32" email="mlernihanv@netscape.com">Lernihan Mavis</option><option class="personnelSearch" id="Cherianne" value="90" email="cliddyard2h@com.com">Liddyard Cherianne</option><option class="personnelSearch" id="Erik" value="22" email="elindbackl@virginia.edu">Lindback Erik</option><option class="personnelSearch" id="Barr" value="14" email="bmacalland@github.com">MacAllan Barr</option><option class="personnelSearch" id="Nikolas" value="79" email="nmager26@nifty.com">Mager Nikolas</option><option class="personnelSearch" id="Rafferty" value="28" email="rmatasovr@4shared.com">Matasov Rafferty</option><option class="personnelSearch" id="Crichton" value="8" email="cmcandrew7@zdnet.com">McAndrew Crichton</option><option class="personnelSearch" id="Glen" value="10" email="gmcdougle9@meetup.com">McDougle Glen</option><option class="personnelSearch" id="Annabela" value="7" email="amcgavigan6@wp.com">McGavigan Annabela</option><option class="personnelSearch" id="Chadd" value="94" email="cmcgettrick2l@simplemachines.org">McGettrick Chadd</option><option class="personnelSearch" id="Bonita" value="30" email="bmcgonaglet@microsoft.com">McGonagle Bonita</option><option class="personnelSearch" id="Mair" value="72" email="mmckirdy1z@ovh.net">McKirdy Mair</option><option class="personnelSearch" id="Myles" value="34" email="mminchix@smugmug.com">Minchi Myles</option><option class="personnelSearch" id="Barnebas" value="96" email="bmowbray2n@cbslocal.com">Mowbray Barnebas</option><option class="personnelSearch" id="Pancho" value="62" email="pmullineux1p@webmd.com">Mullineux Pancho</option><option class="personnelSearch" id="Aggy" value="66" email="anapier1t@sciencedirect.com">Napier Aggy</option><option class="personnelSearch" id="Cindi" value="61" email="comannion1o@ameblo.jp">O'Mannion Cindi</option><option class="personnelSearch" id="Cynthy" value="63" email="cpeyntue1q@amazon.co.jp">Peyntue Cynthy</option><option class="personnelSearch" id="Cordula" value="9" email="cplain8@google.ca">Plain Cordula</option><option class="personnelSearch" id="Darryl" value="78" email="dpool25@vistaprint.com">Pool Darryl</option><option class="personnelSearch" id="Duff" value="47" email="dquail1a@vimeo.com">Quail Duff</option><option class="personnelSearch" id="Dniren" value="65" email="dreboulet1s@360.cn">Reboulet Dniren</option><option class="personnelSearch" id="Lissie" value="43" email="lreddington16@w3.org">Reddington Lissie</option><option class="personnelSearch" id="Shell" value="89" email="srisebarer2g@patch.com">Risebarer Shell</option><option class="personnelSearch" id="Barbara-anne" value="24" email="brooksbyn@issuu.com">Rooksby Barbara-anne</option><option class="personnelSearch" id="Erma" value="73" email="erunnalls20@spiegel.de">Runnalls Erma</option><option class="personnelSearch" id="Nevile" value="49" email="nschimaschke1c@hexun.com">Schimaschke Nevile</option><option class="personnelSearch" id="test" value="104" email="">sdf test</option><option class="personnelSearch" id="test" value="105" email="sdf">sdf test</option><option class="personnelSearch" id="Felic" value="46" email="fsharland19@myspace.com">Sharland Felic</option><option class="personnelSearch" id="Brendis" value="48" email="bshivell1b@un.org">Shivell Brendis</option><option class="personnelSearch" id="Cull" value="68" email="csnoden1v@so-net.ne.jp">Snoden Cull</option><option class="personnelSearch" id="Myrle" value="54" email="mspeer1h@tripod.com">Speer Myrle</option><option class="personnelSearch" id="Taylor" value="17" email="tstquinting@chronoengine.com">St. Quintin Taylor</option><option class="personnelSearch" id="Roanna" value="58" email="rstandering1l@cocolog-nifty.com">Standering Roanna</option><option class="personnelSearch" id="Eveleen" value="85" email="esulter2c@nature.com">Sulter Eveleen</option><option class="personnelSearch" id="Edmund" value="92" email="etace2j@hatena.ne.jp">Tace Edmund</option><option class="personnelSearch" id="Ki" value="93" email="ktomasini2k@cnbc.com">Tomasini Ki</option><option class="personnelSearch" id="Martina" value="82" email="mtremoulet29@sciencedaily.com">Tremoulet Martina</option><option class="personnelSearch" id="Rahal" value="37" email="rtute10@pinterest.com">Tute Rahal</option><option class="personnelSearch" id="Allx" value="31" email="awhaleyu@bbb.org">Whaley Allx</option><option class="personnelSearch" id="Staford" value="52" email="swhitesel1f@nasa.gov">Whitesel Staford</option><option class="personnelSearch" id="Bertie" value="5" email="bwittke4@yahoo.com">Wittke Bertie</option></select>
+    </form>
+    <hr>
+  <h3 class="text-center">Filter Search</h3>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <form class="d-flex" id="myLocationDropdown">
+    <select class="form-select" aria-label="Default select example" id="locationSearch">
+      <option>Location..</option>
+    <option class="locationSearch" value="1" id="1">London</option><option class="locationSearch" value="4" id="4">Munich</option><option class="locationSearch" value="2" id="2">New York</option><option class="locationSearch" value="3" id="3">Paris</option><option class="locationSearch" value="5" id="5">Rome</option></select>
+  </form>
+  <br>
+
+  <div id="personnelTable">
+    <table class="table table-bordered">
+      <thead class="table-primary">
+        <tr>
+          <th>F.NAME</th>
+          <th>L.NAME</th>
+          <th>DEPARTMENT</th>
+          <th>LOCATION</th>
+        </tr>
+      </thead>
+      <tbody id="personnelTableData" class="table-light">
+      <tr value="23" id="23"><td value="23">Tamarra</td><td value="23">Ace</td><td value="23">Support</td><td value="23">Munich</td></tr><tr value="25" id="25" style=""><td value="25">Lucien</td><td value="25">Allsup</td><td value="25">Support</td><td value="25">Munich</td></tr><tr value="60" id="60" style=""><td value="60">Talbot</td><td value="60">Andrassy</td><td value="60">Legal</td><td value="60">London</td></tr><tr value="97" id="97" style=""><td value="97">Stefanie</td><td value="97">Anker</td><td value="97">Services</td><td value="97">London</td></tr><tr value="11" id="11" style=""><td value="11">Theo</td><td value="11">Audas</td><td value="11">Product Management</td><td value="11">Paris</td></tr><tr value="55" id="55" style=""><td value="55">Matthus</td><td value="55">Banfield</td><td value="55">Marketing</td><td value="55">New York</td></tr><tr value="95" id="95" style=""><td value="95">Dulcie</td><td value="95">Baudi</td><td value="95">Marketing</td><td value="95">New York</td></tr><tr value="71" id="71" style=""><td value="71">Ursola</td><td value="71">Berthomieu</td><td value="71">Legal</td><td value="71">London</td></tr><tr value="21" id="21" style=""><td value="21">Gay</td><td value="21">Bickford</td><td value="21">Research and Development</td><td value="21">Paris</td></tr><tr value="38" id="38" style=""><td value="38">Warner</td><td value="38">Blonden</td><td value="38">Business Development</td><td value="38">Paris</td></tr><tr value="77" id="77" style=""><td value="77">Stormie</td><td value="77">Bolderstone</td><td value="77">Accounting</td><td value="77">Rome</td></tr><tr value="27" id="27" style=""><td value="27">Virge</td><td value="27">Bootes</td><td value="27">Sales</td><td value="27">New York</td></tr><tr value="44" id="44" style=""><td value="44">Dore</td><td value="44">Braidford</td><td value="44">Accounting</td><td value="44">Rome</td></tr><tr value="36" id="36" style=""><td value="36">Ailis</td><td value="36">Brewster</td><td value="36">Product Management</td><td value="36">Paris</td></tr><tr value="42" id="42" style=""><td value="42">Lanette</td><td value="42">Buss</td><td value="42">Legal</td><td value="42">London</td></tr><tr value="50" id="50" style=""><td value="50">Jon</td><td value="50">Calbaithe</td><td value="50">Legal</td><td value="50">London</td></tr><tr value="39" id="39" style=""><td value="39">Melvyn</td><td value="39">Canner</td><td value="39">Legal</td><td value="39">London</td></tr><tr value="13" id="13" style=""><td value="13">Leopold</td><td value="13">Carl</td><td value="13">Support</td><td value="13">Munich</td></tr><tr value="64" id="64" style=""><td value="64">Kristine</td><td value="64">Christal</td><td value="64">Training</td><td value="64">Munich</td></tr><tr value="35" id="35" style=""><td value="35">Anitra</td><td value="35">Coleridge</td><td value="35">Research and Development</td><td value="35">Paris</td></tr><tr value="84" id="84" style=""><td value="84">Reagen</td><td value="84">Corner</td><td value="84">Accounting</td><td value="84">Rome</td></tr><tr value="6" id="6" style=""><td value="6">Demetre</td><td value="6">Cossam</td><td value="6">Services</td><td value="6">London</td></tr><tr value="69" id="69" style=""><td value="69">Vlad</td><td value="69">Crocombe</td><td value="69">Product Management</td><td value="69">Paris</td></tr><tr value="15" id="15" style=""><td value="15">Suzie</td><td value="15">Cromer</td><td value="15">Human Resources</td><td value="15">London</td></tr><tr value="51" id="51" style=""><td value="51">Emmery</td><td value="51">Darben</td><td value="51">Engineering</td><td value="51">Rome</td></tr><tr value="98" id="98" style=""><td value="98">Cherye</td><td value="98">de Cullip</td><td value="98">Engineering</td><td value="98">Rome</td></tr><tr value="75" id="75" style=""><td value="75">Christina</td><td value="75">Denge</td><td value="75">Business Development</td><td value="75">Paris</td></tr><tr value="99" id="99" style=""><td value="99">Sinclare</td><td value="99">Deverall</td><td value="99">Research and Development</td><td value="99">Paris</td></tr><tr value="45" id="45" style=""><td value="45">Lizabeth</td><td value="45">Di Franceshci</td><td value="45">Training</td><td value="45">Munich</td></tr><tr value="56" id="56" style=""><td value="56">Annadiana</td><td value="56">Drance</td><td value="56">Marketing</td><td value="56">New York</td></tr><tr value="86" id="86" style=""><td value="86">Christy</td><td value="86">Dunbobbin</td><td value="86">Training</td><td value="86">Munich</td></tr><tr value="33" id="33" style=""><td value="33">Vern</td><td value="33">Durling</td><td value="33">Human Resources</td><td value="33">London</td></tr><tr value="4" id="4" style=""><td value="4">Aveline</td><td value="4">Edgson</td><td value="4">Marketing</td><td value="4">New York</td></tr><tr value="57" id="57" style=""><td value="57">Rinaldo</td><td value="57">Fandrey</td><td value="57">Sales</td><td value="57">New York</td></tr><tr value="59" id="59" style=""><td value="59">Lorrie</td><td value="59">Fattorini</td><td value="59">Support</td><td value="59">Munich</td></tr><tr value="19" id="19" style=""><td value="19">Lay</td><td value="19">Fintoph</td><td value="19">Accounting</td><td value="19">Rome</td></tr><tr value="20" id="20" style=""><td value="20">Moishe</td><td value="20">Flinn</td><td value="20">Business Development</td><td value="20">Paris</td></tr><tr value="91" id="91" style=""><td value="91">Brendan</td><td value="91">Fooks</td><td value="91">Sales</td><td value="91">New York</td></tr><tr value="76" id="76" style=""><td value="76">Wilone</td><td value="76">Fredi</td><td value="76">Product Management</td><td value="76">Paris</td></tr><tr value="74" id="74" style=""><td value="74">Heida</td><td value="74">Gallone</td><td value="74">Engineering</td><td value="74">Rome</td></tr><tr value="80" id="80" style=""><td value="80">Brittney</td><td value="80">Gaskal</td><td value="80">Engineering</td><td value="80">Rome</td></tr><tr value="40" id="40" style=""><td value="40">Ryann</td><td value="40">Giampietro</td><td value="40">Legal</td><td value="40">London</td></tr><tr value="16" id="16"><td value="16">Tracee</td><td value="16">Gisbourn</td><td value="16">Engineering</td><td value="16">Rome</td></tr><tr value="29" id="29" style=""><td value="29">Vanya</td><td value="29">Goulder</td><td value="29">Support</td><td value="29">Munich</td></tr><tr value="81" id="81" style=""><td value="81">Field</td><td value="81">Gresty</td><td value="81">Legal</td><td value="81">London</td></tr><tr value="53" id="53" style=""><td value="53">Benjamin</td><td value="53">Hawkslee</td><td value="53">Product Management</td><td value="53">Paris</td></tr><tr value="1" id="1" style=""><td value="1">Rosana</td><td value="1">Heffron</td><td value="1">Human Resources</td><td value="1">London</td></tr><tr value="67" id="67" style=""><td value="67">Gayleen</td><td value="67">Hessay</td><td value="67">Legal</td><td value="67">London</td></tr><tr value="26" id="26" style=""><td value="26">Jackelyn</td><td value="26">Imlach</td><td value="26">Accounting</td><td value="26">Rome</td></tr><tr value="88" id="88" style=""><td value="88">Lissa</td><td value="88">Insley</td><td value="88">Marketing</td><td value="88">New York</td></tr><tr value="83" id="83" style=""><td value="83">Robena</td><td value="83">Ivanyutin</td><td value="83">Sales</td><td value="83">New York</td></tr><tr value="41" id="41" style=""><td value="41">Harwell</td><td value="41">Jefferys</td><td value="41">Engineering</td><td value="41">Rome</td></tr><tr value="100" id="100" style=""><td value="100">Shae</td><td value="100">Johncey</td><td value="100">Engineering</td><td value="100">Rome</td></tr><tr value="70" id="70" style=""><td value="70">Georgeanna</td><td value="70">Joisce</td><td value="70">Research and Development</td><td value="70">Paris</td></tr><tr value="12" id="12" style=""><td value="12">Spense</td><td value="12">Jolliss</td><td value="12">Training</td><td value="12">Munich</td></tr><tr value="3" id="3" style=""><td value="3">Vera</td><td value="3">Kisbee</td><td value="3">Sales</td><td value="3">New York</td></tr><tr value="18" id="18" style=""><td value="18">Lin</td><td value="18">Klassmann</td><td value="18">Engineering</td><td value="18">Rome</td></tr><tr value="2" id="2" style=""><td value="2">Kris</td><td value="2">Kovnot</td><td value="2">Sales</td><td value="2">New York</td></tr><tr value="87" id="87" style=""><td value="87">Winthrop</td><td value="87">Lansley</td><td value="87">Training</td><td value="87">Munich</td></tr><tr value="32" id="32" style=""><td value="32">Mavis</td><td value="32">Lernihan</td><td value="32">Services</td><td value="32">London</td></tr><tr value="90" id="90" style=""><td value="90">Cherianne</td><td value="90">Liddyard</td><td value="90">Sales</td><td value="90">New York</td></tr><tr value="22" id="22" style=""><td value="22">Erik</td><td value="22">Lindback</td><td value="22">Training</td><td value="22">Munich</td></tr><tr value="14" id="14" style=""><td value="14">Barr</td><td value="14">MacAllan</td><td value="14">Services</td><td value="14">London</td></tr><tr value="79" id="79" style=""><td value="79">Nikolas</td><td value="79">Mager</td><td value="79">Services</td><td value="79">London</td></tr><tr value="28" id="28" style=""><td value="28">Rafferty</td><td value="28">Matasov</td><td value="28">Legal</td><td value="28">London</td></tr><tr value="8" id="8" style=""><td value="8">Crichton</td><td value="8">McAndrew</td><td value="8">Human Resources</td><td value="8">London</td></tr><tr value="10" id="10" style=""><td value="10">Glen</td><td value="10">McDougle</td><td value="10">Research and Development</td><td value="10">Paris</td></tr><tr value="7" id="7" style=""><td value="7">Annabela</td><td value="7">McGavigan</td><td value="7">Legal</td><td value="7">London</td></tr><tr value="94" id="94" style=""><td value="94">Chadd</td><td value="94">McGettrick</td><td value="94">Engineering</td><td value="94">Rome</td></tr><tr value="30" id="30" style=""><td value="30">Bonita</td><td value="30">McGonagle</td><td value="30">Human Resources</td><td value="30">London</td></tr><tr value="72" id="72" style=""><td value="72">Mair</td><td value="72">McKirdy</td><td value="72">Human Resources</td><td value="72">London</td></tr><tr value="34" id="34" style=""><td value="34">Myles</td><td value="34">Minchi</td><td value="34">Product Management</td><td value="34">Paris</td></tr><tr value="96" id="96" style=""><td value="96">Barnebas</td><td value="96">Mowbray</td><td value="96">Human Resources</td><td value="96">London</td></tr><tr value="62" id="62" style=""><td value="62">Pancho</td><td value="62">Mullineux</td><td value="62">Human Resources</td><td value="62">London</td></tr><tr value="66" id="66" style=""><td value="66">Aggy</td><td value="66">Napier</td><td value="66">Marketing</td><td value="66">New York</td></tr><tr value="61" id="61" style=""><td value="61">Cindi</td><td value="61">O'Mannion</td><td value="61">Accounting</td><td value="61">Rome</td></tr><tr value="63" id="63" style=""><td value="63">Cynthy</td><td value="63">Peyntue</td><td value="63">Research and Development</td><td value="63">Paris</td></tr><tr value="9" id="9" style=""><td value="9">Cordula</td><td value="9">Plain</td><td value="9">Services</td><td value="9">London</td></tr><tr value="78" id="78" style=""><td value="78">Darryl</td><td value="78">Pool</td><td value="78">Accounting</td><td value="78">Rome</td></tr><tr value="47" id="47" style=""><td value="47">Duff</td><td value="47">Quail</td><td value="47">Support</td><td value="47">Munich</td></tr><tr value="65" id="65" style=""><td value="65">Dniren</td><td value="65">Reboulet</td><td value="65">Product Management</td><td value="65">Paris</td></tr><tr value="43" id="43" style=""><td value="43">Lissie</td><td value="43">Reddington</td><td value="43">Support</td><td value="43">Munich</td></tr><tr value="89" id="89" style=""><td value="89">Shell</td><td value="89">Risebarer</td><td value="89">Engineering</td><td value="89">Rome</td></tr><tr value="24" id="24" style=""><td value="24">Barbara-anne</td><td value="24">Rooksby</td><td value="24">Business Development</td><td value="24">Paris</td></tr><tr value="73" id="73" style=""><td value="73">Erma</td><td value="73">Runnalls</td><td value="73">Training</td><td value="73">Munich</td></tr><tr value="49" id="49" style=""><td value="49">Nevile</td><td value="49">Schimaschke</td><td value="49">Engineering</td><td value="49">Rome</td></tr><tr value="104" id="104" style=""><td value="104">test</td><td value="104">sdf</td><td value="104">Human Resources</td><td value="104">London</td></tr><tr value="105" id="105" style=""><td value="105">test</td><td value="105">sdf</td><td value="105">Human Resources</td><td value="105">London</td></tr><tr value="46" id="46" style=""><td value="46">Felic</td><td value="46">Sharland</td><td value="46">Business Development</td><td value="46">Paris</td></tr><tr value="48" id="48" style=""><td value="48">Brendis</td><td value="48">Shivell</td><td value="48">Human Resources</td><td value="48">London</td></tr><tr value="68" id="68" style=""><td value="68">Cull</td><td value="68">Snoden</td><td value="68">Human Resources</td><td value="68">London</td></tr><tr value="54" id="54" style=""><td value="54">Myrle</td><td value="54">Speer</td><td value="54">Marketing</td><td value="54">New York</td></tr><tr value="17" id="17" style=""><td value="17">Taylor</td><td value="17">St. Quintin</td><td value="17">Engineering</td><td value="17">Rome</td></tr><tr value="58" id="58" style=""><td value="58">Roanna</td><td value="58">Standering</td><td value="58">Marketing</td><td value="58">New York</td></tr><tr value="85" id="85" style=""><td value="85">Eveleen</td><td value="85">Sulter</td><td value="85">Research and Development</td><td value="85">Paris</td></tr><tr value="92" id="92"><td value="92">Edmund</td><td value="92">Tace</td><td value="92">Support</td><td value="92">Munich</td></tr><tr value="93" id="93" style=""><td value="93">Ki</td><td value="93">Tomasini</td><td value="93">Engineering</td><td value="93">Rome</td></tr><tr value="82" id="82" style=""><td value="82">Martina</td><td value="82">Tremoulet</td><td value="82">Marketing</td><td value="82">New York</td></tr><tr value="37" id="37" style=""><td value="37">Rahal</td><td value="37">Tute</td><td value="37">Research and Development</td><td value="37">Paris</td></tr><tr value="31" id="31" style=""><td value="31">Allx</td><td value="31">Whaley</td><td value="31">Human Resources</td><td value="31">London</td></tr><tr value="52" id="52" style=""><td value="52">Staford</td><td value="52">Whitesel</td><td value="52">Research and Development</td><td value="52">Paris</td></tr><tr value="5" id="5" style=""><td value="5">Bertie</td><td value="5">Wittke</td><td value="5">Legal</td><td value="5">London</td></tr></tbody>
+    </table>
+    <button type="button" class="btn btn-outline-primary filterBackBtn" onclick="reload()">Back</button>
+  </div>
+
+  <div id="locationTable">
+    <table class="table table-bordered">
+      <thead class="table-primary">
+        <tr>
+          <th>F.NAME</th>
+          <th>L.NAME</th>
+          <th>DEPARTMENT</th>
+          <th>LOCATION</th>
+        </tr>
+      </thead>
+      <tbody id="locationTableData" class="table-light">
+      <tr value="23" id="23"><td value="23">Tamarra</td><td value="23">Ace</td><td value="23">Support</td><td value="23">Munich</td></tr><tr value="25" id="25" style=""><td value="25">Lucien</td><td value="25">Allsup</td><td value="25">Support</td><td value="25">Munich</td></tr><tr value="60" id="60" style=""><td value="60">Talbot</td><td value="60">Andrassy</td><td value="60">Legal</td><td value="60">London</td></tr><tr value="97" id="97" style=""><td value="97">Stefanie</td><td value="97">Anker</td><td value="97">Services</td><td value="97">London</td></tr><tr value="11" id="11" style=""><td value="11">Theo</td><td value="11">Audas</td><td value="11">Product Management</td><td value="11">Paris</td></tr><tr value="55" id="55" style=""><td value="55">Matthus</td><td value="55">Banfield</td><td value="55">Marketing</td><td value="55">New York</td></tr><tr value="95" id="95" style=""><td value="95">Dulcie</td><td value="95">Baudi</td><td value="95">Marketing</td><td value="95">New York</td></tr><tr value="71" id="71" style=""><td value="71">Ursola</td><td value="71">Berthomieu</td><td value="71">Legal</td><td value="71">London</td></tr><tr value="21" id="21" style=""><td value="21">Gay</td><td value="21">Bickford</td><td value="21">Research and Development</td><td value="21">Paris</td></tr><tr value="38" id="38" style=""><td value="38">Warner</td><td value="38">Blonden</td><td value="38">Business Development</td><td value="38">Paris</td></tr><tr value="77" id="77" style=""><td value="77">Stormie</td><td value="77">Bolderstone</td><td value="77">Accounting</td><td value="77">Rome</td></tr><tr value="27" id="27" style=""><td value="27">Virge</td><td value="27">Bootes</td><td value="27">Sales</td><td value="27">New York</td></tr><tr value="44" id="44" style=""><td value="44">Dore</td><td value="44">Braidford</td><td value="44">Accounting</td><td value="44">Rome</td></tr><tr value="36" id="36" style=""><td value="36">Ailis</td><td value="36">Brewster</td><td value="36">Product Management</td><td value="36">Paris</td></tr><tr value="42" id="42" style=""><td value="42">Lanette</td><td value="42">Buss</td><td value="42">Legal</td><td value="42">London</td></tr><tr value="50" id="50" style=""><td value="50">Jon</td><td value="50">Calbaithe</td><td value="50">Legal</td><td value="50">London</td></tr><tr value="39" id="39" style=""><td value="39">Melvyn</td><td value="39">Canner</td><td value="39">Legal</td><td value="39">London</td></tr><tr value="13" id="13" style=""><td value="13">Leopold</td><td value="13">Carl</td><td value="13">Support</td><td value="13">Munich</td></tr><tr value="64" id="64" style=""><td value="64">Kristine</td><td value="64">Christal</td><td value="64">Training</td><td value="64">Munich</td></tr><tr value="35" id="35" style=""><td value="35">Anitra</td><td value="35">Coleridge</td><td value="35">Research and Development</td><td value="35">Paris</td></tr><tr value="84" id="84" style=""><td value="84">Reagen</td><td value="84">Corner</td><td value="84">Accounting</td><td value="84">Rome</td></tr><tr value="6" id="6" style=""><td value="6">Demetre</td><td value="6">Cossam</td><td value="6">Services</td><td value="6">London</td></tr><tr value="69" id="69" style=""><td value="69">Vlad</td><td value="69">Crocombe</td><td value="69">Product Management</td><td value="69">Paris</td></tr><tr value="15" id="15" style=""><td value="15">Suzie</td><td value="15">Cromer</td><td value="15">Human Resources</td><td value="15">London</td></tr><tr value="51" id="51" style=""><td value="51">Emmery</td><td value="51">Darben</td><td value="51">Engineering</td><td value="51">Rome</td></tr><tr value="98" id="98" style=""><td value="98">Cherye</td><td value="98">de Cullip</td><td value="98">Engineering</td><td value="98">Rome</td></tr><tr value="75" id="75" style=""><td value="75">Christina</td><td value="75">Denge</td><td value="75">Business Development</td><td value="75">Paris</td></tr><tr value="99" id="99" style=""><td value="99">Sinclare</td><td value="99">Deverall</td><td value="99">Research and Development</td><td value="99">Paris</td></tr><tr value="45" id="45" style=""><td value="45">Lizabeth</td><td value="45">Di Franceshci</td><td value="45">Training</td><td value="45">Munich</td></tr><tr value="56" id="56" style=""><td value="56">Annadiana</td><td value="56">Drance</td><td value="56">Marketing</td><td value="56">New York</td></tr><tr value="86" id="86" style=""><td value="86">Christy</td><td value="86">Dunbobbin</td><td value="86">Training</td><td value="86">Munich</td></tr><tr value="33" id="33" style=""><td value="33">Vern</td><td value="33">Durling</td><td value="33">Human Resources</td><td value="33">London</td></tr><tr value="4" id="4" style=""><td value="4">Aveline</td><td value="4">Edgson</td><td value="4">Marketing</td><td value="4">New York</td></tr><tr value="57" id="57" style=""><td value="57">Rinaldo</td><td value="57">Fandrey</td><td value="57">Sales</td><td value="57">New York</td></tr><tr value="59" id="59" style=""><td value="59">Lorrie</td><td value="59">Fattorini</td><td value="59">Support</td><td value="59">Munich</td></tr><tr value="19" id="19" style=""><td value="19">Lay</td><td value="19">Fintoph</td><td value="19">Accounting</td><td value="19">Rome</td></tr><tr value="20" id="20" style=""><td value="20">Moishe</td><td value="20">Flinn</td><td value="20">Business Development</td><td value="20">Paris</td></tr><tr value="91" id="91" style=""><td value="91">Brendan</td><td value="91">Fooks</td><td value="91">Sales</td><td value="91">New York</td></tr><tr value="76" id="76" style=""><td value="76">Wilone</td><td value="76">Fredi</td><td value="76">Product Management</td><td value="76">Paris</td></tr><tr value="74" id="74" style=""><td value="74">Heida</td><td value="74">Gallone</td><td value="74">Engineering</td><td value="74">Rome</td></tr><tr value="80" id="80" style=""><td value="80">Brittney</td><td value="80">Gaskal</td><td value="80">Engineering</td><td value="80">Rome</td></tr><tr value="40" id="40" style=""><td value="40">Ryann</td><td value="40">Giampietro</td><td value="40">Legal</td><td value="40">London</td></tr><tr value="16" id="16"><td value="16">Tracee</td><td value="16">Gisbourn</td><td value="16">Engineering</td><td value="16">Rome</td></tr><tr value="29" id="29" style=""><td value="29">Vanya</td><td value="29">Goulder</td><td value="29">Support</td><td value="29">Munich</td></tr><tr value="81" id="81" style=""><td value="81">Field</td><td value="81">Gresty</td><td value="81">Legal</td><td value="81">London</td></tr><tr value="53" id="53" style=""><td value="53">Benjamin</td><td value="53">Hawkslee</td><td value="53">Product Management</td><td value="53">Paris</td></tr><tr value="1" id="1" style=""><td value="1">Rosana</td><td value="1">Heffron</td><td value="1">Human Resources</td><td value="1">London</td></tr><tr value="67" id="67" style=""><td value="67">Gayleen</td><td value="67">Hessay</td><td value="67">Legal</td><td value="67">London</td></tr><tr value="26" id="26" style=""><td value="26">Jackelyn</td><td value="26">Imlach</td><td value="26">Accounting</td><td value="26">Rome</td></tr><tr value="88" id="88" style=""><td value="88">Lissa</td><td value="88">Insley</td><td value="88">Marketing</td><td value="88">New York</td></tr><tr value="83" id="83" style=""><td value="83">Robena</td><td value="83">Ivanyutin</td><td value="83">Sales</td><td value="83">New York</td></tr><tr value="41" id="41" style=""><td value="41">Harwell</td><td value="41">Jefferys</td><td value="41">Engineering</td><td value="41">Rome</td></tr><tr value="100" id="100" style=""><td value="100">Shae</td><td value="100">Johncey</td><td value="100">Engineering</td><td value="100">Rome</td></tr><tr value="70" id="70" style=""><td value="70">Georgeanna</td><td value="70">Joisce</td><td value="70">Research and Development</td><td value="70">Paris</td></tr><tr value="12" id="12" style=""><td value="12">Spense</td><td value="12">Jolliss</td><td value="12">Training</td><td value="12">Munich</td></tr><tr value="3" id="3" style=""><td value="3">Vera</td><td value="3">Kisbee</td><td value="3">Sales</td><td value="3">New York</td></tr><tr value="18" id="18" style=""><td value="18">Lin</td><td value="18">Klassmann</td><td value="18">Engineering</td><td value="18">Rome</td></tr><tr value="2" id="2" style=""><td value="2">Kris</td><td value="2">Kovnot</td><td value="2">Sales</td><td value="2">New York</td></tr><tr value="87" id="87" style=""><td value="87">Winthrop</td><td value="87">Lansley</td><td value="87">Training</td><td value="87">Munich</td></tr><tr value="32" id="32" style=""><td value="32">Mavis</td><td value="32">Lernihan</td><td value="32">Services</td><td value="32">London</td></tr><tr value="90" id="90" style=""><td value="90">Cherianne</td><td value="90">Liddyard</td><td value="90">Sales</td><td value="90">New York</td></tr><tr value="22" id="22" style=""><td value="22">Erik</td><td value="22">Lindback</td><td value="22">Training</td><td value="22">Munich</td></tr><tr value="14" id="14" style=""><td value="14">Barr</td><td value="14">MacAllan</td><td value="14">Services</td><td value="14">London</td></tr><tr value="79" id="79" style=""><td value="79">Nikolas</td><td value="79">Mager</td><td value="79">Services</td><td value="79">London</td></tr><tr value="28" id="28" style=""><td value="28">Rafferty</td><td value="28">Matasov</td><td value="28">Legal</td><td value="28">London</td></tr><tr value="8" id="8" style=""><td value="8">Crichton</td><td value="8">McAndrew</td><td value="8">Human Resources</td><td value="8">London</td></tr><tr value="10" id="10" style=""><td value="10">Glen</td><td value="10">McDougle</td><td value="10">Research and Development</td><td value="10">Paris</td></tr><tr value="7" id="7" style=""><td value="7">Annabela</td><td value="7">McGavigan</td><td value="7">Legal</td><td value="7">London</td></tr><tr value="94" id="94" style=""><td value="94">Chadd</td><td value="94">McGettrick</td><td value="94">Engineering</td><td value="94">Rome</td></tr><tr value="30" id="30" style=""><td value="30">Bonita</td><td value="30">McGonagle</td><td value="30">Human Resources</td><td value="30">London</td></tr><tr value="72" id="72" style=""><td value="72">Mair</td><td value="72">McKirdy</td><td value="72">Human Resources</td><td value="72">London</td></tr><tr value="34" id="34" style=""><td value="34">Myles</td><td value="34">Minchi</td><td value="34">Product Management</td><td value="34">Paris</td></tr><tr value="96" id="96" style=""><td value="96">Barnebas</td><td value="96">Mowbray</td><td value="96">Human Resources</td><td value="96">London</td></tr><tr value="62" id="62" style=""><td value="62">Pancho</td><td value="62">Mullineux</td><td value="62">Human Resources</td><td value="62">London</td></tr><tr value="66" id="66" style=""><td value="66">Aggy</td><td value="66">Napier</td><td value="66">Marketing</td><td value="66">New York</td></tr><tr value="61" id="61" style=""><td value="61">Cindi</td><td value="61">O'Mannion</td><td value="61">Accounting</td><td value="61">Rome</td></tr><tr value="63" id="63" style=""><td value="63">Cynthy</td><td value="63">Peyntue</td><td value="63">Research and Development</td><td value="63">Paris</td></tr><tr value="9" id="9" style=""><td value="9">Cordula</td><td value="9">Plain</td><td value="9">Services</td><td value="9">London</td></tr><tr value="78" id="78" style=""><td value="78">Darryl</td><td value="78">Pool</td><td value="78">Accounting</td><td value="78">Rome</td></tr><tr value="47" id="47" style=""><td value="47">Duff</td><td value="47">Quail</td><td value="47">Support</td><td value="47">Munich</td></tr><tr value="65" id="65" style=""><td value="65">Dniren</td><td value="65">Reboulet</td><td value="65">Product Management</td><td value="65">Paris</td></tr><tr value="43" id="43" style=""><td value="43">Lissie</td><td value="43">Reddington</td><td value="43">Support</td><td value="43">Munich</td></tr><tr value="89" id="89" style=""><td value="89">Shell</td><td value="89">Risebarer</td><td value="89">Engineering</td><td value="89">Rome</td></tr><tr value="24" id="24" style=""><td value="24">Barbara-anne</td><td value="24">Rooksby</td><td value="24">Business Development</td><td value="24">Paris</td></tr><tr value="73" id="73" style=""><td value="73">Erma</td><td value="73">Runnalls</td><td value="73">Training</td><td value="73">Munich</td></tr><tr value="49" id="49" style=""><td value="49">Nevile</td><td value="49">Schimaschke</td><td value="49">Engineering</td><td value="49">Rome</td></tr><tr value="104" id="104" style=""><td value="104">test</td><td value="104">sdf</td><td value="104">Human Resources</td><td value="104">London</td></tr><tr value="105" id="105" style=""><td value="105">test</td><td value="105">sdf</td><td value="105">Human Resources</td><td value="105">London</td></tr><tr value="46" id="46" style=""><td value="46">Felic</td><td value="46">Sharland</td><td value="46">Business Development</td><td value="46">Paris</td></tr><tr value="48" id="48" style=""><td value="48">Brendis</td><td value="48">Shivell</td><td value="48">Human Resources</td><td value="48">London</td></tr><tr value="68" id="68" style=""><td value="68">Cull</td><td value="68">Snoden</td><td value="68">Human Resources</td><td value="68">London</td></tr><tr value="54" id="54" style=""><td value="54">Myrle</td><td value="54">Speer</td><td value="54">Marketing</td><td value="54">New York</td></tr><tr value="17" id="17" style=""><td value="17">Taylor</td><td value="17">St. Quintin</td><td value="17">Engineering</td><td value="17">Rome</td></tr><tr value="58" id="58" style=""><td value="58">Roanna</td><td value="58">Standering</td><td value="58">Marketing</td><td value="58">New York</td></tr><tr value="85" id="85" style=""><td value="85">Eveleen</td><td value="85">Sulter</td><td value="85">Research and Development</td><td value="85">Paris</td></tr><tr value="92" id="92"><td value="92">Edmund</td><td value="92">Tace</td><td value="92">Support</td><td value="92">Munich</td></tr><tr value="93" id="93" style=""><td value="93">Ki</td><td value="93">Tomasini</td><td value="93">Engineering</td><td value="93">Rome</td></tr><tr value="82" id="82" style=""><td value="82">Martina</td><td value="82">Tremoulet</td><td value="82">Marketing</td><td value="82">New York</td></tr><tr value="37" id="37" style=""><td value="37">Rahal</td><td value="37">Tute</td><td value="37">Research and Development</td><td value="37">Paris</td></tr><tr value="31" id="31" style=""><td value="31">Allx</td><td value="31">Whaley</td><td value="31">Human Resources</td><td value="31">London</td></tr><tr value="52" id="52" style=""><td value="52">Staford</td><td value="52">Whitesel</td><td value="52">Research and Development</td><td value="52">Paris</td></tr><tr value="5" id="5" style=""><td value="5">Bertie</td><td value="5">Wittke</td><td value="5">Legal</td><td value="5">London</td></tr></tbody>
+    </table>
+    <button type="button" class="btn btn-outline-primary filterBackBtn" onclick="reload()">Back</button>
+  </div>
+  
+</div>
+
+    <!--Location List-->
+    <div class="jumbotron" id="locationHolder" style="display: none;">
+      <br>
+        <h1 class="text-center">
+            Select Location
+        </h1>
+        <div class="d-grid gap-2 col-6 mx-auto"><span id="locationList"><div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary locationList" type="button" id="1" name="London">London</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="1" value="1" name="London">Info</button></div><div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary locationList" type="button" id="4" name="Munich">Munich</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="4" value="4" name="Munich">Info</button></div><div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary locationList" type="button" id="2" name="New York">New York</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="2" value="2" name="New York">Info</button></div><div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary locationList" type="button" id="3" name="Paris">Paris</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="3" value="3" name="Paris">Info</button></div><div class="d-grid gap-2 col-6 mx-auto"><a class="btn btn-secondary locationList" type="button" id="5" name="Rome">Rome</a><button type="button" class="btn btn-primary infoButton locationInfoBtn" data-bs-toggle="modal" data-bs-target="#locationModal" id="5" value="5" name="Rome">Info</button></div></span>
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newLocationModal" id="newLocationBtn">New</button>
+      </div>
+  </div>
+
+    <!-- location Modal -->
+    <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="locationTitle">Location</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location Name</label>
+              <input type="email" class="form-control" id="editLocationName" placeholder="Location Name" disabled="disabled">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="editLocationBtn">Edit</button>
+            <button type="button" class="btn btn-secondary locationClose" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#editLocationCheck" id="editLocationCheckBtn">Save</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteLocationCheck" id="deleteLocationCheckBtn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Confirm Location Edit  -->
+      <div class="modal fade" id="editLocationCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm Edit?</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="saveEditLocationBtn">Yes</button>
+              <button type="button" class="btn btn-secondary locationClose" data-bs-dismiss="modal" id="closeDeleteBtn">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm Location delete  -->
+    <div class="modal fade" id="deleteLocationCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Are You Sure You Want To Delete?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" id="deleteLocationBtn">Yes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Location Modal -->
+    <div class="modal fade" id="newLocationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Location</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location Name</label>
+              <input type="email" class="form-control" id="newLocationName" placeholder="Location Name">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#newLocationCheck" id="#newLocationCheckBtn">Save Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm New Location  -->
+    <div class="modal fade" id="newLocationCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Are You Sure You Want To Create New Location?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" id="saveNewLocationBtn">Yes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeLocationDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Location Check  -->
+    <div class="modal fade" id="createCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Location?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="saveNewLocationBtn">Yes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeLocationDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Department List-->
+    <div class="jumbotron" id="departmentHolder" style="display: none;">
+      <br>
+        <h1 class="text-center">Select Department</h1>
+        <div class="d-grid gap-2 col-6 mx-auto"><span id="departmentList"></span>
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newDepartmentModal" id="newDepartmentBtn" style="display: none;">New</button>
+        </div>
+    </div>
+
+    <!-- Department Modal -->
+    <div class="modal fade" id="departmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="departmentTitle">Department</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Department Name</label>
+              <input type="email" class="form-control" disabled="disabled" id="selectedDepartmentName" placeholder="Department Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Department ID</label>
+              <input type="email" class="form-control" disabled="disabled" id="selectedDepartmentID" placeholder="Department ID">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location ID</label>
+              <input type="email" class="form-control" disabled="disabled" id="selectedDepartmentLocID" placeholder="Department Location ID">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location Name</label>
+              <input type="email" class="form-control" disabled="disabled" id="selectedDepartmentLocName" placeholder="Department Location ID">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="editDepartmentBtn">Edit</button>
+            <button type="button" class="btn btn-secondary editDepartmentCloseBtn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#editDepartmentCheck" id="editDepartmentCheckBtn">Save</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePersonnelCheck" id="deleteDepartmentCheckBtn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm Location Edit  -->
+    <div class="modal fade" id="editDepartmentCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Edit?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="saveEditDepartmentBtn">Yes</button>
+            <button type="button" class="btn btn-secondary editDepartmentCloseBtn" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Department -->
+    <div class="modal fade" id="deleteDepartmentCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Are You Sure You Want To Delete Department?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" id="deleteDepartmentBtn">Delete</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeDepartmentDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Department Modal -->
+    <div class="modal fade" id="newDepartmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Department</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Department Name</label>
+              <input type="email" class="form-control" id="newDepartmentName" placeholder="New Department Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Location ID</label>
+              <input type="email" class="form-control" disabled="disabled" id="newDepartmentLocID" placeholder="Location ID">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createDepartmentCheck">Save Department</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Department Check  -->
+    <div class="modal fade" id="createDepartmentCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Department?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="saveNewDepartmentBtn">Yes</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Personnel List-->
+    <div class="jumbotron" id="personnelHolder" style="display: none;">
+      <br>
+        <h1 class="text-center" id="personnelTitle">Personnel</h1>
+        <div class="d-grid gap-2 col-6 mx-auto"><span id="personnelList"></span>
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPersonnelModal" id="newPersonnelBtn" style="display: none;">New</button>
+        </div>
+      </div>
+
+      <!-- Delete Personnel-->
+      <div class="modal fade" id="deletePersonnelCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Are You Sure You Want To Delete?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" id="deletePersonnelBtn">Delete</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closePersonnelDeleteBtn">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Personnel Modal-->
+    <div class="modal fade" id="personnelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="selectedPersonnelTitle">Personnel</h5>
+          </div>
+          <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                <input type="text" class="form-control" disabled="disabled" id="firstName" placeholder="First Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" disabled="disabled" id="lastName" placeholder="Last Name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Job Title</label>
+                <input type="text" class="form-control" disabled="disabled" id="jobTitle" placeholder="Job Title">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="text" class="form-control" disabled="disabled" id="email" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Department</label>
+                <input type="text" class="form-control" disabled="disabled" id="personelDepartmentName" placeholder="Department Name">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" disabled="disabled" id="personelLocationName" placeholder="Location Name">
+              </div>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editPersonnelModal" id="editPersonnelBtn">Edit</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editPersonnelCheck" id="editCheckBtn">Save</button>
+            <button type="button" class="btn btn-secondary editPersonnelCloseBtn" data-bs-dismiss="modal" id="editPersonnelCloseBtn">Close</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePersonnelCheck" id="deleteCheckBtn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm Personnel Edit  -->
+    <div class="modal fade" id="editPersonnelCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Edit?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="saveEditPersonnelBtn">Yes</button>
+            <button type="button" class="btn btn-secondary editPersonnelCloseBtn" data-bs-dismiss="modal" id="closeDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Personnel Check  -->
+    <div class="modal fade" id="deletePersonnelCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Delete?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="deletePersonnelBtn">Yes</button>
+            <button type="button" class="btn btn-secondary editPersonnelCloseBtn" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Personnel Modal -->
+    <div class="modal fade" id="newPersonnelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Personnel</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="newFirstName" name="newFirstName" placeholder="First Name" required="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="newLastName" name="newLastName" placeholder="Last Name" required="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Job Title</label>
+              <input type="text" class="form-control" id="newJobTitle" name="newJobTitle" placeholder="Job Title" required="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="text" class="form-control" id="newEmail" name="newEmail" placeholder="Email" required="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Department</label>
+              <input type="text" class="form-control" disabled="disabled" id="departmentName" placeholder="Department Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" disabled="disabled" id="locationName" placeholder="Location Name">
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#createPersonnelCheck">Save Personnel</button>
+            <button type="button" class="btn btn-secondary editPersonnelCloseBtn" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Department Check  -->
+    <div class="modal fade" id="createPersonnelCheck" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Personnel?</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="saveNewPersonnelBtn">Save Personnel</button>
+            <button type="button" class="btn btn-secondary editPersonnelCloseBtn" data-bs-dismiss="modal" id="closeDeleteBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+   <!--<nav class="navbar navbar-dark bg-dark fixed-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="allLocationBtn">Location</a>
+        <a class="navbar-brand" id="allDepartmentBtn">Department</a>
+        <a class="navbar-brand" id="allPersonnelBtn">Personnel</a>
+      </div>
+    </nav>-->
+
+  <script src="./Document_files/jquery.min.js"></script>
+  <script src="./Document_files/jquery.js"></script>    
+	<script src="./Document_files/bootstrap.js"></script>
+	<script src="./Document_files/bootstrap.bundle.js"></script>
+	<script src="./Document_files/script.js"></script>
+    
+
+</div></body></html>

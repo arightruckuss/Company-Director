@@ -7,6 +7,4 @@
 	$cd_password = "RucktooaMySQL1!"; // password
 	$cd_dbname = "companydirectory"; // database name
 
-	
-
 ?>
