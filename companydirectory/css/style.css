@@ -6,18 +6,24 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 #favicon {
-    height: 80px;
+    height: 35px;
     border-radius: 45px;
 }
 
-h2 {
-    margin-top: 30px;
+form {
+    position: relative;
+    display: inline;
 }
 
 #navBar {
-    background-color: #00a7e1;
+    background-color: #3973ac;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    line-height: 20px;
 }
 
 #navTitle {
@@ -29,14 +35,241 @@ h2 {
     font-size: 21px;
 }
 
-#homeButton {
-    height: 40px;
-    right: 5px;
-    position: absolute;
+#bottomNavBar {
+    background-color: #dfe0e1;
 }
 
-#welcomeHolder {
+#myInput {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+    border-radius: 20px;
+}
+
+#plusPersonnsel {
+    right: 11px;
+    height: 34px;
+    position: absolute;
+    top: 58px;
     display: block;
+}
+
+#myLocationDropdown{
+    text-align: center;
+}
+
+span {
+    color: darkgray;
+    font-size: 12px;
+}
+
+td {
+    font-size: 20px;
+    line-height: 1;
+}
+
+#perFixedLink {
+    width: 46vw;
+    display: none;
+}
+
+#deptFixedLink {
+    width: 46vw;
+    display: block;
+}
+
+#locFixedLink {
+    width: 46vw;
+    display: block;
+}
+
+#locationSearch {
+    width: 47vw;
+    height: 34px;
+    border-radius: 20px;
+}
+
+#departmentSearch {
+    width: 47vw;
+    height: 34px;
+    border-radius: 20px;
+}
+
+#searchHolder {
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 2px;    
+}
+
+#departmentHolder {
+    display: none;
+    margin-bottom: 45px;
+    margin-top: 2px;
+}
+
+#locationHolder {
+    display: none;
+    margin-bottom: 45px;
+    margin-top: 2px;
+}
+
+#personnelHolder {
+    display: none;
+    margin-bottom: 30px;
+    margin-top: 2px;
+}
+
+#personelLocationBox {
+    display: block;
+}
+
+#editPersonelLocationBox {
+    display: none;
+}
+
+#personelDepartmentBox {
+    display: block;
+}
+
+#saveEditDepartmentBtn {
+    display: block
+}
+
+#editPersonelDepartmentBox {
+    display: none;
+}
+
+#newDepartmentBtn {
+    display: inline;
+    position: relative;
+    margin-bottom: 4px;
+    width: 220px;
+    margin-left: 11px;
+}
+
+#newLocationBtn {
+    display: inline;
+    position: relative;
+    margin-bottom: 4px;
+    width: 225px;
+    margin-left: 11px;
+}
+
+#newPersonnelSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#editPersonnelSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#editDeptSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#newLocSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#deleteLocSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#newDeptSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+#deleteDeptSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+
+#deletePersonnelSuccessBox {
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    word-spacing: 2px;
+    width: 95vw;
+}
+
+td {
+    color: black;
+    border: none;
+    width: 100%;
+    text-align: left;
+    line-height: 1;
+    border-radius: 10px;
+}
+
+td:hover {
+    background-color: #5c636a;
+}
+
+#personnelTable {
+    overflow: scroll;
+    margin: 0px 10px;
+    margin-top: -17px;
+    border-radius: 10px;
+    display: block;
+}
+
+#departmentTable {
+    overflow: scroll;
+    margin: 0px 10px;
+    margin-top: -17px;
+    border-radius: 10px;
+    display: none;
+}
+
+#locationTable {
+    overflow: scroll;
+    margin: 0px 10px;
+    margin-top: -17px;
+    border-radius: 10px;
+    display: none;
+}
+
+#deleteWarning {
+    margin-right: 30px;
+}
+
+
+
+
+
+
+#welcomeHolder {
+    display: none;
     margin-top: 30px;
 }
 
@@ -90,28 +323,6 @@ h2 {
     font-family: Verdana, sans-serif;
 }
 
-#personnelTable {
-    overflow: scroll;
-    margin: 0px 10px;
-    border-radius: 10px;
-    display: none;
-}
-
-#departmentTable {
-    overflow: scroll;
-    margin: 0px 10px;
-    border-radius: 10px;
-    display: none;
-}
-
-#locationTable {
-    overflow: scroll;
-    margin: 0px 10px;
-    border-radius: 10px;
-    display: none;
-}
-
-
 table {
     font-size: 0.8em;
 }
@@ -127,35 +338,13 @@ th {
 }
 
 #personnelSearch {
-    width: 200px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     height: 34px;
     border-radius: 20px;
 }
 
-#locationSearch {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 34px;
-    border-radius: 20px;
-}
-
-#departmentSearch {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 34px;
-    border-radius: 20px;
-}
-
-#myInput {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-}
 
 .dangerButton {
     background-color: #d9534f;
@@ -168,35 +357,60 @@ th {
     font-family: Verdana, sans-serif;
 }
 
-
-#searchHolder {
-    display: none;
-}
-
-
 .locationList {
     margin: 5px;
     width: 225px;
     background-color: #3973ac;
 }
 
-#locationHolder {
-    display: none;
-    margin-bottom: 40px;
-}
-
-#newLocationBtn {
-    display: block;
-    position: relative;
-    left: 35px;
-    bottom: -4px;
-}
-
 #deleteLocationCheckBtn {
+    display: none;
+    position: absolute;
+    left: 10px;
+}
+
+#deleteLocUnableBtn { 
+    display: none;
+    position: absolute;
+    left: 10px;
+}
+
+#deleteDeptCheckBtn {
+    display: none;
+    position: absolute;
+    left: 10px;
+}
+
+#deleteDeptUnableBtn { 
     display: block;
     position: absolute;
     left: 10px;
 }
+
+#deleteDeptUnableBox {
+    position: absolute;
+    top: 238px;
+    left: 10px;
+}
+
+#deleteLocUnableBtn { 
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+#deleteLocUnableBox {
+    position: absolute;
+    top: 238px;
+    left: 10px;
+}
+
+#editPersonnelSuccessBox {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+}
+
 
 #editLocationCheckBtn {
     display: none;
@@ -204,13 +418,6 @@ th {
 
 #editLocationBtn {
     display: block;
-}
-
-#newDepartmentBtn {
-    display: none;
-    position: relative;
-    left: 37px;
-    bottom: -5px;
 }
 
 .departmentList {
@@ -227,10 +434,6 @@ th {
     width: auto;
 }
 
-#editDepartmentBtn {
-    display: block;
-}
-
 #editDepartmentCheckBtn {
     display: none;
 }
@@ -242,20 +445,6 @@ th {
     margin-right: 30px;
 }
 
-#departmentHolder {
-    display: none;
-}
-
-.personnelList {
-    margin: 5px;
-    width: 225px;
-    background-color: #3973ac;
-}
-
-#personnelHolder {
-    display: none;
-    margin-bottom: 40px;
-}
 
 #newPersonnelBtn {
     display: block;
@@ -281,7 +470,7 @@ th {
     display: block;
 }
 
-#editCheckBtn {
+#editPersonnelCheckBtn {
     display: none;
 }
 
@@ -289,7 +478,7 @@ th {
     display: none;
 }
 
-#deleteCheckBtn {
+#deletePersonnelCheckBtn {
     display: block;
     position: absolute;
     left: 10px;
@@ -299,8 +488,3 @@ th {
     display: block;
 }
 
-#deleteDepartmentCheckBtn {
-    display: block;
-    left: 10px;
-    position: absolute;
-}
