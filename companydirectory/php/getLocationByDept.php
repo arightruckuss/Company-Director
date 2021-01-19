@@ -1,9 +1,5 @@
 <?php
 
-	// example use from browser
-	// use insertDepartment.php first to create new dummy record and then specify it's id in the command below
-	// http://localhost/companydirectory/libs/php/deleteDepartmentByID.php?id= <id>
-
 	// remove next two lines for production
 	
 	ini_set('display_errors', 'On');
@@ -33,9 +29,7 @@
 
 	}	
 
-	// $_REQUEST used for development / debugging. Remember to cange to $_POST for production
-
-	$query = 'UPDATE `department` SET `name`= "' . $_POST['name'] . '", `locationID`= "' . $_POST['locationID'] . '" WHERE `id` = "' . $_POST['id'] . '"';
+	$query = 'SELECT id, name FROM location WHERE id = "'. $_POST['id'] .'"';
 
 	$result = $conn->query($query);
 	
@@ -53,12 +47,20 @@
 		exit;
 
 	}
+   
+   	$data = [];
+
+	while ($row = mysqli_fetch_assoc($result)) {
+
+		array_push($data, $row);
+
+	}
 
 	$output['status']['code'] = "200";
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = (microtime(true) - $executionStartTime) / 1000 . " ms";
-	$output['data'] = [];
+	$output['data'] = $data;
 	
 	mysqli_close($conn);
 

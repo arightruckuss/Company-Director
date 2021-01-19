@@ -22,63 +22,70 @@
     </div>
   </nav>
 
-  <input class="form-control" id="myInput" type="text" placeholder="Personnel Search..."><img data-bs-toggle="modal" data-bs-target="#newPersonnelModal" src="images/newButton.png" id="plusPersonnsel" alt="plusPersonnsel" title="plusPersonnsel"/><!--<span id="plusPersonnsel">+</span>-->
-  
-<!--Search List-->
-<div class="jumbotron" id="searchHolder">
-  <div class="d-flex justify-content-center" id="dropdownSearches">
-    <form class="d-flex" id="myLocationDropdown">
-      <span>
-      <select class="form-select" aria-label="Default select example" id="locationSearch">
-        <option>Location...</option>
-      </select>
-    </span>
-    <span class="d-flex" id="myDepartmentDropdown">
-      <select class="form-select" aria-label="Default select example" id="departmentSearch">
-        <option>Department...</option>
-      </select>
-      </span>
-    </form>
-  </div>
-  <br>
+      <!--Search Lists-->
+      <div>
+      <input class="form-control" id="myInput" type="text" placeholder="Personnel Search...">
+      <img data-bs-toggle="modal" data-bs-target="#newPersonnelModal" src="images/newButton.png" id="plusPersonnsel" alt="plusPersonnsel" title="plusPersonnsel"/><!--<span id="plusPersonnsel">+</span>-->
+    </div>
 
-  <div id="personnelTable">
-    <table class="table table-bordered">
-      <thead class="table-primary">
-        <tr>
-          <th id="selectLocationList">Personnel Search</th>
-        </tr>
-      </thead>
-      <tbody id="personnelTableData" class="table-light">
-      </tbody>
-    </table>
-  </div>
+    <div class="jumbotron" id="searchHolder">
+      <div class="d-flex justify-content-center" id="dropdownSearches">
+        <form class="d-flex" id="myLocationDropdown">
+          <span>
+          <select class="form-select" aria-label="Default select example" id="locationSearch">
+            <option value="location">Location...</option>
+          </select>
+        </span>
+        <span class="d-flex" id="myDepartmentDropdown">
+          <select class="form-select" aria-label="Default select example" id="departmentSearch">
+            <option value="department">Department...</option>
+          </select>
+          </span>
+        </form>
+      </div>
+      <br>
 
-  <div id="locationTable">
-    <table class="table table-bordered">
-      <thead class="table-primary">
-        <tr>
-          <th id="selectLocationList">Personnel By Location</th>
-        </tr>
-      </thead>
-      <tbody id="locationTableData" class="table-light">
-      </tbody>
-    </table>
-  </div>
 
-  <div id="departmentTable">
-    <table class="table table-bordered">
-      <thead class="table-primary">
-        <tr>
-          <th>Personnel By Department</th>
-        </tr>
-      </thead>
-      <tbody id="departmentTableData" class="table-light">
-      </tbody>
-    </table>
-  </div>
-  
-</div>
+      <!--Table Data-->
+      <div id="personnelTable">
+        <table class="table table-bordered sticky">
+          <thead class="table-primary">
+            <tr>
+              <th id="selectLocationList">Personnel Search</th>
+            </tr>
+          </thead>
+          <tbody id="personnelTableData" class="table-light">
+          </tbody>
+        </table>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+
+      <div id="locationTable">
+        <table class="table table-bordered sticky">
+          <thead class="table-primary">
+            <tr>
+              <th id="selectLocationList">Personnel By Location</th>
+            </tr>
+          </thead>
+          <tbody id="locationTableData" class="table-light">
+          </tbody>
+        </table>
+      </div>
+
+      <div id="departmentTable">
+        <table class="table table-bordered sticky">
+          <thead class="table-primary">
+            <tr>
+              <th>Personnel By Department</th>
+            </tr>
+          </thead>
+          <tbody id="departmentTableData" class="table-light">
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     <!--Location List-->
     <div class="jumbotron" id="locationHolder">
@@ -100,8 +107,13 @@
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Location Name</label>
               <input type="email" class="form-control" id="editLocationName" placeholder="Location Name" disabled="disabled">
-            </div>
-          </div>
+            <div id="locDeptListHolder">
+              <br>
+              <label for="exampleFormControlInput1" class="form-label">Departments</label>
+              <ul class="list-group list-group-flush" id="locDeptList">
+              </ul>
+              </div>
+           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success" id="editLocationBtn">Edit</button>
             <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#editLocationCheck" id="editLocationCheckBtn">Save</button>
@@ -115,6 +127,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
 
       <!-- Confirm Location Edit  -->
@@ -227,6 +240,16 @@
               <label for="exampleFormControlInput1" class="form-label">Department Name</label>
               <input type="email" class="form-control" disabled="disabled" id="selectedDepartmentName" placeholder="Department Name">
             </div>
+            <div id="deptLocListHolder">
+              <label for="exampleFormControlInput1" class="form-label">Location</label>
+              <ul class="list-group list-group-flush" id="deptLocList">
+              </ul>
+              </div>
+              <span id="newDeptLocHolder">
+                <label for="exampleFormControlInput1" class="form-label">Location</label>
+                <select class="form-select" aria-label="Default select example" id="newDeptLoc">
+                </select>
+              </span>
           </div>
           <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#deleteDepartmentCheck" id="deleteDeptCheckBtn">Delete</button>
@@ -506,6 +529,7 @@
         <button type="button" class="btn btn-info btn-sm" id="locFixedLink">Locations</button>
       </div>
     </nav>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.js"></script>    

@@ -61,19 +61,39 @@ type: 'POST',
 dataType: 'json',
 success: function(result) {
     if (result.status.name == "ok") {
+      
         $(document).ready(function(){
           for (i = 0; i < result['data'].length; i++) {
             $departmentID = result['data'][i]['id'];
             $departmentName = result['data'][i]['name'];
-            $('#departmentSearch').append('<option class="departmentSearch" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</option>');
-            $('#departmentList').append('<div class="d-grid gap-2 col-6 mx-auto"><button class="btn btn-secondary departmentList" data-bs-toggle="modal" data-bs-target="#departmentModal" type="button" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</button></div>');
-            $('#newPersonneldepartment').append('<option class="newDepartmentSearch" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</option>');
+            $departmentLoc = result['data'][i]['locationID'];
+            $('#departmentSearch').append('<option class="departmentSearch" loc="'+$departmentLoc+'" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</option>');
+            $('#departmentList').append('<div class="d-grid gap-2 col-6 mx-auto"><button class="btn btn-secondary departmentList" data-bs-toggle="modal" data-bs-target="#departmentModal" type="button" loc="'+$departmentLoc+'" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</button></div>');
+            $('#newPersonneldepartment').append('<option class="newDepartmentSearch" loc="'+$departmentLoc+'" value="'+$departmentID+'" id="'+$departmentID+'">'+$departmentName+'</option>');
           }})}}})
+    
+$('body').on('click','.departmentList',function(){  
+  $departmentSelected = $(this).html();
+  $departmentSelectedID = $(this).attr('id');
+  $departmentSelectedLoc = $(this).attr('loc');
+
+  $.ajax({
+    url: "php/getLocationByDept.php",
+    type: 'POST',
+    dataType: 'json',
+    data: {
+      id: $departmentSelectedLoc,
+    },
+    success: function(result) {
+        if (result.status.name == "ok") {
+          $deptLoc = result['data'][0]['name'];
+          $('#deptLocList').html('');
+          $('#deptLocList').append('<li class="list-group-item">'+$deptLoc+'</li>');
+        }}})})
 
 $('body').on('change','#departmentSearch',function(){
   $departmentSearchID = $(this).val();
   $('#departmentTableData').html('');
-  console.log($departmentSearchID );
 
   $.ajax({
     url: "php/getAllPersonnelByDepartment.php",
@@ -83,7 +103,6 @@ $('body').on('change','#departmentSearch',function(){
       id: $departmentSearchID,
     },
     success: function(result) {
-      console.log(result);
       for (i = 0; i < result['data'].length; i++) {
         $allPersonnelDepID = result['data'][i]['id'];
         $allPersonnelDepFirstName = result['data'][i]['firstName'];
@@ -91,7 +110,7 @@ $('body').on('change','#departmentSearch',function(){
         $allPersonnelDepEmail = result['data'][i]['email'];
         $allPersonnelDepDepartment = result['data'][i]['department'];
         $allPersonnelDepLocation = result['data'][i]['location'];
-        $('#departmentTableData').append('<tr value="'+$allPersonnelDepID+'" id="'+$allPersonnelDepID+'"><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepFirstName+', '+$allPersonnelDepLastName+'<br><span id="personnelDep">'+$allPersonnelDepDepartment+'</span><span id="personnelLoc"> '+$allPersonnelDepLocation+'</span></td></tr>');
+        $('#departmentTableData').append('<tr value="'+$allPersonnelDepID+'" id="'+$allPersonnelDepID+'"><td value="'+$allPersonnelDepID+'">'+$allPersonnelDepFirstName+', '+$allPersonnelDepLastName+'<br><span id="personnelDep">'+$allPersonnelDepDepartment+', </span><span id="personnelLoc"> '+$allPersonnelDepLocation+'</span></td></tr>');
   }}})
 })
 
@@ -121,6 +140,8 @@ $('#editDepartmentBtn').on('click' ,function(){
   $("#selectedDepartmentTitle").html('Personnel Edit');
   $("#deleteDepartmentCheckBt").css("display", "none");
   $("#departmentTitle").html('Department Edit');
+  $("#deptLocListHolder").css("display", "none");
+  $("#newDeptLocHolder").css("display", "block");
   $('#selectedDepartmentName').attr('disabled', false);
   $("#selectedDepartmentName").val($departmentSelected);
   $("#deleteDeptUnableBtn").hide();
@@ -128,6 +149,7 @@ $('#editDepartmentBtn').on('click' ,function(){
 //Edit Department button
   $('body').on('click','#saveEditDepartmentBtn',function(){    
     $editDepartmentName = $("#selectedDepartmentName").val();
+    $newDeptLoc = $("#newDeptLoc").val();
 
     $.ajax({
       url: "php/editDepartment.php",
@@ -136,6 +158,7 @@ $('#editDepartmentBtn').on('click' ,function(){
       data: {
         id: $departmentSelectedID,
         name: $editDepartmentName,
+        locationID: $newDeptLoc,
       },
       success: function(result) {
         if (result.status.name != "ok") {
@@ -149,6 +172,8 @@ $('body').on('click','.editDepartmentCloseBtn',function(){
   $("#editDepartmentBtn").css("display", "block");
   $("#editDepartmentCheckBtn").css("display", "none");
   $("#departmentTitle").html('Department');
+  $("#deptLocListHolder").css("display", "block");
+  $("#newDeptLocHolder").css("display", "none");
   $('#selectedDepartmentName').attr('disabled', true);
   $("#editDepartmentCheckBtn").css("display", "none");
   $("#deleteDeptUnableBtn").show();
@@ -157,9 +182,7 @@ $('body').on('click','.editDepartmentCloseBtn',function(){
 //New Department
 $('body').on('click','#saveNewDepartmentBtn',function(){   
   $newDepartmentName = $('#newDepartmentName').val();
-  console.log($newDepartmentName);
   $newLocationID = $('#newDepartmentLocation').val();
-  console.log($newLocationID);
 
   $.ajax({
     url: "php/insertDepartment.php",
@@ -200,6 +223,7 @@ $('body').on('click','.locationClose',function(){
   $("#editLocationBtn").css('display', 'block');
   $("#editLocationCheckBtn").css('display', 'none');
   $("#deleteLocationCheckBtn").css('display', 'block');
+  $("#locDeptListHolder").css('display', 'block');
   $("#editLocationName").attr("disabled", true);
   $("#locationTitle").html('Location');
 })
@@ -236,12 +260,11 @@ $.ajax({
               $allPersonnelDepartment = result['data'][i]['department'];
               $allPersonnelLocation = result['data'][i]['location'];
               $('#personnelSearch').append('<option class="personnelSearch" id="'+$allPersonnelFirstName+'" value="'+$allPersonnelID+'" email="'+$allPersonnelEmail+'">'+$allPersonnelLastName+' '+$allPersonnelFirstName+'</option>');
-              $('#personnelTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+'</span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
-              $('#departmentTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+'</span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
-              $('#locationTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+'</span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
+              $('#personnelTableData').append('<tr class="spaceUnder" value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+', </span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
+              $('#departmentTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+', </span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
+              $('#locationTableData').append('<tr value="'+$allPersonnelID+'" id="'+$allPersonnelID+'"><td value="'+$allPersonnelID+'">'+$allPersonnelLastName+', '+$allPersonnelFirstName+'<br><span id="personnelDep">'+$allPersonnelDepartment+', </span><span id="personnelLoc"> '+$allPersonnelLocation+'</span></td></tr>');
             }
         })
-
 }}}); 
 
 $.ajax({
@@ -256,6 +279,7 @@ $.ajax({
               $locationName = result['data'][i]['name'];
               $('#locationSearch').append('<option class="locationSearch" value="'+$locationID+'" id="'+$locationID+'" name="'+$locationName+'">'+$locationName+'</option>');
               $('#newDepartmentLocation').append('<option class="locationSearch" value="'+$locationID+'" id="'+$locationID+'" name="'+$locationName+'">'+$locationName+'</option>');
+              $('#newDeptLoc').append('<option class="locationSearch" value="'+$locationID+'" id="'+$locationID+'" name="'+$locationName+'">'+$locationName+'</option>');
             }})}}})
 
 //Filter location search
@@ -351,7 +375,6 @@ $(document).ready(function(){
 //New department choice ID
 $('#newPersonneldepartment').on('change' ,function(){ 
   $newDepartmentID = $(this).val();
-  console.log($newDepartmentID)
 
 $('body').on('click','#saveNewPersonnelBtn',function(){    
   $insertFirstName = $('#newFirstName').val();
@@ -467,7 +490,6 @@ $('#editPersonnelBtn').on('click' ,function(){
 
 $('body').on('change','#editLocationSearch',function(){    
   $locationSelected = $(this).val();
-  console.log($locationSelected)
 })
 
 
@@ -477,7 +499,6 @@ $('body').on('click','#saveEditPersonnelBtn',function(){
   $jobTitleVal = $("#jobTitle").val();
   $emailVal = $("#email").val();
   $departmentSelected = $('#editDepartmentSearch').val();
-  console.log($departmentSelected)
 
   $.ajax({
     url: "php/editPersonnel.php",
@@ -495,7 +516,7 @@ $('body').on('click','#saveEditPersonnelBtn',function(){
       if (result.status.name != "ok") {
         alert('There was a error');
       }else {
-        console.log('w')
+        setTimeout('location.reload();', 2000);
     }}})
 })
 
@@ -506,7 +527,6 @@ $('body').on('click','.locationList',function(){
   $locationSelected = $(this).html();
   $locationSelectedID = $(this).attr('id');
   $('#editLocationName').val($locationSelected);
-  console.log($locationSelected);
   $.ajax({
     url: "php/getDepartmentByLocID.php",
     type: 'POST',
@@ -516,13 +536,17 @@ $('body').on('click','.locationList',function(){
     },
     success: function(result) {
         if (result.status.name == "ok") {
-          console.log(result)
+          $('#locDeptList').html('');
           if(result['data'][0] == undefined) {
             $("#deleteLocUnableBtn").css("display", "none");
             $("#deleteLocationCheckBtn").css("display", "block");
           } else {
             $("#deleteLocationCheckBtn").css("display", "none");
             $("#deleteLocUnableBtn").css("display", "block");
+            for (i = 0; i < result['data'].length; i++) {
+              $locDeptName = result['data'][i]['name'];
+              $('#locDeptList').append('<li class="list-group-item">'+$locDeptName+'</li>');
+            }
           }
         }}})})
 
@@ -585,7 +609,7 @@ $('body').on('click','#saveEditLocationBtn',function(){
       if (result.status.name != "ok") {
         alert('There was a error, the ID may be taken please try again');
       }else {
-        alert('done');
+        setTimeout(location.reload(),2000)
     }}})
   })
 
@@ -622,6 +646,7 @@ $('body').on('click','#editLocationBtn',function(){
   $("#deleteLocationCheckBtn").css('display', 'none');
   $("#editLocationCheckBtn").css('display', 'block');
   $("#locationTitle").html('Location Edit');
+  $("#locDeptListHolder").css('display', 'none');
   $editLocationName = $('#editLocationName').val();
 
   $.ajax({
@@ -733,19 +758,21 @@ $(document).ready(function() {
 
 $('body').on('change','#locationSearch',function(){  
   $locationSearchName = $(this).attr('id');
-  console.log($locationSearchName);
 })
 
+$('body').on('change','#locationSearch',function(){ 
+  $selectedLocation = $(this).val();
+  if($selectedLocation === 'location'){
+    location.reload();
+  }
+})
 
-
-
-
-
-
-
-
-            
-
+$('body').on('change','#departmentSearch',function(){ 
+  $selectedDepartment = $(this).val();
+  if($selectedDepartment === 'department'){
+    location.reload();
+  }
+})
 
 
 
