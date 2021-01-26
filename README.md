@@ -1,2 +1,2 @@
 # Company-Director
-Company Personnel Database
+MySQL Database handled with CRUD funcatility through AJAX calls
